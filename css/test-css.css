@@ -1,0 +1,44 @@
+body {
+    background-color: #eaeaea;
+}
+
+.main-wrapper {
+    height: 600px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 800px;
+    padding: 20px 5px;
+}
+
+.main-event {
+    float: left;
+}
+
+.action-event {
+    float: right;
+}
+
+#write-your-story {
+    height: 230px;
+    width: 320px;
+}
+
+#imager-div {
+    background-color: darkgray;
+    border: 1px solid lightgray;
+    float: left;
+    height: 500px;
+    line-height: 15px;
+    padding: 3px;
+    width: 440px;
+}
+
+#text {
+    display: block;
+    height: 160px;
+    margin: 5px auto;
+    overflow-y: scroll;
+    resize: none;
+    width: 300px;
+}

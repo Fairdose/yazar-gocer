@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yazar Göçer</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/test-css.css">
+
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="main-event">
+        <div id="imager-div">
+        </div>
+        <div id="converted-img">
+
+        </div>
+    </div>
+    <div class="action-event">
+        <div id="write-your-story">
+            <strong>Hikayenizi yazın</strong>
+            <textarea id="text" onkeyup="toDiv()"></textarea>
+            <button id="btnSave">Save as</button>
+        </div>
+    </div>
+    <div class="customize-event">
+        <div class="arkaplan-div">
+            <input name="arkaplan" type="radio" value="#">
+            <input name="arkaplan" type="radio" value="">
+            <input name="arkaplan" type="radio" value="">
+            <input name="arkaplan" type="radio" value="">
+            <input name="arkaplan" type="radio" value="">
+            <input name="arkaplan" type="radio" value="">
+        </div>
+        <div class="yazi-rengi-div">
+            <input name="yazi-rengi" type="radio" value="white">
+            <input name="yazi-rengi" type="radio" value="black">
+        </div>
+        <div class="yazi-boyutu">
+            <strong>Yazı boyutu :</strong>
+            <select id="font-chooser" onchange="setFont()">
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+                <option value="14" selected="selected">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="22">22</option>
+                <option value="26">26</option>
+                <option value="32">32</option>
+            </select>
+        </div>
+    </div>
+</div>
+<script>
+    function toDiv(){
+        var text = $("#text").val();
+        text = text.replace(/\r?\n/g, '<br>');
+        $('#imager-div').html(text);
+    }
+
+    function setFont(){
+        var fontValue = $('#font-chooser').val();
+        $('#imager-div').css({'font-size':fontValue+'px','line-height':fontValue+'px'});
+    }
+
+    $(function() {
+        $("#btnSave").click(function() {
+            html2canvas($("#imager-div"), {
+                onrendered: function(canvas) {
+
+                    $('canvas').remove();
+
+                    document.getElementById('converted-img').appendChild(canvas);
+
+                }
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
