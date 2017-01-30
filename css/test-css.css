@@ -11,34 +11,85 @@ body {
     padding: 20px 5px;
 }
 
-.main-event {
-    float: left;
+
+/* CSS'e kopyalama başlangıç noktası */
+
+.position-div {
+    background-color: white;
+    min-height: 360px;
+    margin: 0 auto;
+    padding: 15px;
+    width: 615px;
 }
 
-.action-event {
+.left-side-div {
+    float: left;
+    width: 160px;
+}
+
+.right-side-div {
     float: right;
+    margin-right: 20px;
+    width: 410px;
 }
 
-#write-your-story {
-    height: 230px;
-    width: 320px;
+.mid-right-side {
+    height: 75px;
+    margin: 15px 0;
+    width: inherit;
 }
 
-#imager-div {
-    background-color: darkgray;
-    border: 1px solid lightgray;
-    float: left;
-    height: 500px;
-    line-height: 15px;
-    padding: 3px;
-    width: 440px;
+.bottom-right-side {
+    height: 200px;
+    margin: 15px 0;
+    width: inherit;
+}
+
+.mid-right-side div {
+    display: inline;
+    height: inherit;
+    line-height: 75px;
 }
 
 #text {
-    display: block;
-    height: 160px;
-    margin: 5px auto;
+    float: right;
+    height: 65px;
     overflow-y: scroll;
     resize: none;
     width: 300px;
+}
+
+#btnSave {
+    display: block;
+    margin: 5px auto;
+}
+
+.background-picker span {
+    display: block;
+    margin: 10px 5px;
+}
+
+.font-size-picker {
+    display: inline-block;
+    margin: 10px 5px;
+    width: 240px;
+}
+
+.font-color-picker {
+    margin: 10px 5px;
+}
+
+.font-color-picker input {
+    width: 40px;
+    text-align: right;
+}
+
+#imager-div {
+    background-color: white;
+    border: 1px solid;
+    height: 125px;
+    margin: 5px auto;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    width: 125px;
 }

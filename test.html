@@ -10,46 +10,39 @@
 </head>
 <body>
 <div class="main-wrapper">
-    <div class="main-event">
-        <div id="imager-div">
+    <div class="position-div">
+        <div class="left-side-div">
+            <div class="background-picker">
+                <span>Arka Renk</span>
+                <span><input name="background-color" value="red" type="radio">Kırmızı</span>
+                <span><input name="background-color" value="green" type="radio">Yeşil</span>
+                <span><input name="background-color" value="yellow" type="radio">Sarı</span>
+                <span><input name="background-color" value="blue" type="radio">Mavi</span>
+                <span><input name="background-color" value="black" type="radio">Siyah</span>
+                <span><input name="background-color" value="grey" type="radio">Gri</span>
+                <span><input name="background-color" value="white" type="radio" checked="checked">Beyaz</span>
+            </div>
         </div>
-        <div id="converted-img">
-
-        </div>
-    </div>
-    <div class="action-event">
-        <div id="write-your-story">
-            <strong>Hikayenizi yazın</strong>
-            <textarea id="text" onkeyup="toDiv()"></textarea>
-            <button id="btnSave">Save as</button>
-        </div>
-    </div>
-    <div class="customize-event">
-        <div class="arkaplan-div">
-            <input name="arkaplan" type="radio" value="#">
-            <input name="arkaplan" type="radio" value="">
-            <input name="arkaplan" type="radio" value="">
-            <input name="arkaplan" type="radio" value="">
-            <input name="arkaplan" type="radio" value="">
-            <input name="arkaplan" type="radio" value="">
-        </div>
-        <div class="yazi-rengi-div">
-            <input name="yazi-rengi" type="radio" value="white">
-            <input name="yazi-rengi" type="radio" value="black">
-        </div>
-        <div class="yazi-boyutu">
-            <strong>Yazı boyutu :</strong>
-            <select id="font-chooser" onchange="setFont()">
-                <option value="6">6</option>
-                <option value="8">8</option>
-                <option value="12">12</option>
-                <option value="14" selected="selected">14</option>
-                <option value="16">16</option>
-                <option value="18">18</option>
-                <option value="22">22</option>
-                <option value="26">26</option>
-                <option value="32">32</option>
-            </select>
+        <div class="right-side-div">
+            <div class="top-right-side">
+            <span class="font-size-picker">
+                <span>Yazı Rengi: </span>
+                <span><input name="font-color" type="radio" checked="checked">Siyah</span>
+                <span><input name="font-color" type="radio">Beyaz</span>
+            </span>
+            <span class="font-color-picker">
+                <span>Boyut:  <input id="font-chooser" type="number" min="4" max="32" value="14" onchange="setFont()">px</span>
+            </span>
+            </div>
+            <div class="mid-right-side">
+                <div>Salata başlığı</div>
+                <textarea id="text" onkeyup="toDiv()"></textarea>
+            </div>
+            <div class="bottom-right-side">
+                <button id="btnSave">Resme dönüştür</button>
+                <div id="imager-div"></div>
+                <div id="converted-img"></div>
+            </div>
         </div>
     </div>
 </div>
