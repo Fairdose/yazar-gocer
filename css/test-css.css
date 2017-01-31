@@ -11,6 +11,11 @@ body {
     padding: 20px 5px;
 }
 
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 /* CSS'e kopyalama başlangıç noktası */
 
@@ -52,11 +57,18 @@ body {
 }
 
 #text {
-    float: right;
     height: 65px;
     overflow-y: scroll;
     resize: none;
-    width: 300px;
+    width: inherit;
+}
+
+#text-div {
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
 }
 
 #btnSave {
@@ -89,7 +101,23 @@ body {
     border: 1px solid;
     height: 125px;
     margin: 5px auto;
+    width: 125px;
+    max-width: 125px;
+    max-height: 125px;
     overflow: hidden;
     overflow-wrap: break-word;
-    width: 125px;
+}
+
+#text-div {
+
+}
+
+.example-product,.final-product {
+    float: left;
+    margin: 5px 15px;
+}
+
+#process-div {
+    width: 340px;
+    margin: 5px auto;
 }
